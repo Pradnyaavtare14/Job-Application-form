@@ -34,13 +34,13 @@ const JobApplicationForm = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-md">
+    <div className="max-w-8xl mx-auto p-6 bg-white shadow-md rounded-md">
       <h2 className="text-2xl font-bold mb-6">Add Job Application</h2>
       <form onSubmit={handleSubmit}>
         <h1 className='mb-4'>Create New</h1>
         <hr className='mb-7' />
         <div className="grid grid-cols-1 gap-6">
-          <div className="grid grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div>
               <label className="block mb-2 font-medium">
                 Jobs<sup className="text-red-500">*</sup>
@@ -101,7 +101,7 @@ const JobApplicationForm = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div>
               <label className="block mb-2 font-medium">
                 Location<sup className="text-red-500">*</sup>
@@ -153,7 +153,7 @@ const JobApplicationForm = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div>
               <label className="block mb-2 font-medium">Current CTC Rate</label>
               <select
@@ -206,7 +206,7 @@ const JobApplicationForm = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label className="block mb-2 font-medium">Status</label>
               <select
@@ -249,20 +249,26 @@ const JobApplicationForm = () => {
         </div>
         <div className="mt-6 flex space-x-4">
           <button
-            type="Save"
+            type="submit"
             className="px-4 py-2 bg-orange-500 text-white font-medium rounded-md"
           >
             Save
           </button>
           <button
-            type="Save"
-            className="px-4 py-2  text-black border font-medium rounded-lg"
+            type="button"
+            className="px-4 py-2 bg-gray-300 text-black font-medium rounded-md"
+            onClick={() => {
+              // Handle save and add more functionality
+            }}
           >
             Save & Add More
           </button>
           <button
-            type="Save"
-            className="px-4 py-2 text-gray-500 font-medium rounded-md"
+            type="button"
+            className="px-4 py-2 bg-gray-200 text-gray-500 font-medium rounded-md"
+            onClick={() => {
+              // Handle cancel functionality
+            }}
           >
             Cancel
           </button>
